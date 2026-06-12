@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrainBot — Inteligență artificială, predată cu mâinile</title>
+  <meta name="description" content="TrainBot: copiii 7-14 ani antrenează propriile modele AI direct pe iPad, în clasă. Sigur, conform GDPR, sub controlul profesorului. Cere un pilot gratuit." />
+  <meta name="theme-color" content="#7B6CF0" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TrainBot — Inteligență artificială, predată cu mâinile" />
+  <meta property="og:description" content="Copiii antrenează propriile modele AI în clasă. Sigur, conform GDPR, sub controlul profesorului." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://trainbot.moldluca.tech" />
+  <meta property="og:image" content="https://trainbot.moldluca.tech/images/og-image.png" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237B6CF0'/><stop offset='1' stop-color='%236B86F0'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='68' font-family='Arial' font-size='52' font-weight='700' fill='white' text-anchor='middle'>TB</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Atmospheric background blobs -->
+  <div class="bg-atmosphere" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="brand" aria-label="TrainBot">
+      <span class="brand-mark">
+        <svg viewBox="0 0 100 100" width="36" height="36" aria-hidden="true">
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7B6CF0" /><stop offset="1" stop-color="#6B86F0" />
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="26" fill="url(#navGrad)" />
+          <text x="50" y="68" font-family="'Bricolage Grotesque',sans-serif" font-size="50" font-weight="800" fill="#fff" text-anchor="middle">TB</text>
+        </svg>
+      </span>
+      <span class="brand-name">TrainBot</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#how" data-i18n="nav.how">Cum funcționează</a>
+      <a href="#teachers" data-i18n="nav.teachers">Pentru profesori</a>
+      <a href="#safety" data-i18n="nav.safety">Siguranță</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Limbă / Language">
+        <button data-lang="ro" class="is-active" aria-pressed="true">RO</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#pilot" class="btn btn-primary btn-sm" data-i18n="nav.cta">Cere un pilot</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="hero.eyebrow">EdTech · AI pentru clasa ta</span>
+        <h1 class="hero-title" data-i18n="hero.title">Inteligența artificială,<br />predată cu mâinile.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Copiii de 7–14 ani își antrenează propriile modele AI direct pe iPad, în clasă. Tu, profesorul, vezi tot și controlezi tot. Sigur și conform GDPR.</p>
+        <div class="hero-cta">
+          <a href="#pilot" class="btn btn-primary" data-i18n="hero.cta1">Cere un pilot gratuit</a>
+          <a href="#how" class="btn btn-ghost" data-i18n="hero.cta2">Vezi cum funcționează →</a>
+        </div>
+        <div class="hero-trust">
+          <span data-i18n="hero.trust1">Zero date personale de la copii</span>
+          <span class="dot">•</span>
+          <span data-i18n="hero.trust2">Pe device, în clasă</span>
+          <span class="dot">•</span>
+          <span data-i18n="hero.trust3">Sub controlul profesorului</span>
+        </div>
+      </div>
+
+      <div class="hero-mascot">
+        <!-- Mascot recreat din MascotView.swift -->
+        <div class="mascot mascot-xl" id="heroMascot" data-state="idle">
+          <div class="mascot-head">
+            <div class="mascot-eyes">
+              <span class="eye eye-l"></span>
+              <span class="eye eye-r"></span>
+            </div>
+          </div>
+          <div class="mascot-glow"></div>
+        </div>
+        <div class="mascot-caption" data-i18n="hero.mascot">Salut! Sunt TB. Hai să antrenăm un model.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="section problem" id="problem">
+    <div class="container narrow">
+      <span class="section-tag" data-i18n="problem.tag">Provocarea</span>
+      <h2 class="section-title" data-i18n="problem.title">AI-ul e peste tot. Dar cum îl predai unui copil de 9 ani?</h2>
+      <p class="section-lead" data-i18n="problem.lead">Manualele explică teorie. Slide-urile arată definiții. Dar inteligența artificială se înțelege făcând-o — antrenând, greșind, corectând. Fără un instrument potrivit, profesorul rămâne cu metafore, iar copilul cu întrebări.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <span class="problem-icon">📖</span>
+          <h3 data-i18n="problem.c1t">Prea abstract</h3>
+          <p data-i18n="problem.c1p">„Rețea neuronală" nu înseamnă nimic pentru un copil care n-a văzut niciodată un model învățând.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-icon">🧩</span>
+          <h3 data-i18n="problem.c2t">Fără instrumente sigure</h3>
+          <p data-i18n="problem.c2p">Uneltele AI pentru adulți cer cont, date personale și acces nelimitat la internet. Nepotrivit pentru clasă.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-icon">👀</span>
+          <h3 data-i18n="problem.c3t">Profesorul nu vede progresul</h3>
+          <p data-i18n="problem.c3p">Fără tablou de bord, nu știi cine a înțeles, cine s-a blocat și ce model a construit fiecare elev.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section how" id="how">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-tag" data-i18n="how.tag">Cum funcționează</span>
+        <h2 class="section-title" data-i18n="how.title">Trei pași. Un model antrenat de copil.</h2>
+      </div>
+
+      <div class="steps">
+        <article class="step" data-mascot="learning">
+          <span class="step-num">01</span>
+          <h3 data-i18n="how.s1t">Copilul antrenează</h3>
+          <p data-i18n="how.s1p">Pe iPad, elevul colectează exemple (poze sau text) și antrenează un model real, on-device, cu CoreML. Vede cum modelul „învață" în timp real.</p>
+        </article>
+        <article class="step" data-mascot="thinking">
+          <span class="step-num">02</span>
+          <h3 data-i18n="how.s2t">Copilul testează</h3>
+          <p data-i18n="how.s2p">Apoi îl pune la încercare cu exemple noi. „A ghicit corect?" Butonul de feedback îl învață că un model bun cere date bune.</p>
+        </article>
+        <article class="step" data-mascot="happy">
+          <span class="step-num">03</span>
+          <h3 data-i18n="how.s3t">Profesorul vede tot</h3>
+          <p data-i18n="how.s3p">În tabloul de bord, vezi clasele, temele și progresul fiecărui elev — ce model a construit, cât de bine performează, unde s-a blocat.</p>
+        </article>
+
+        <!-- Mascot guide that follows the steps -->
+        <div class="how-mascot" aria-hidden="true">
+          <div class="mascot mascot-md" id="howMascot" data-state="idle">
+            <div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEACHERS / DASHBOARD ============ -->
+  <section class="section teachers" id="teachers">
+    <div class="container split">
+      <div class="split-copy">
+        <span class="section-tag" data-i18n="teachers.tag">Pentru profesori</span>
+        <h2 class="section-title" data-i18n="teachers.title">Tabloul de bord care îți dă controlul.</h2>
+        <p class="section-lead" data-i18n="teachers.lead">Creezi clase și conturi de elev în câteva secunde — fără emailuri, fără date personale de la copii. Apoi urmărești totul dintr-un singur loc.</p>
+        <ul class="feature-list">
+          <li data-i18n="teachers.f1"><strong>Clase &amp; conturi elevi</strong> — username și parolă create de tine, stil Tinkercad.</li>
+          <li data-i18n="teachers.f2"><strong>Teme</strong> — dai sarcini de antrenare și vezi cine a predat.</li>
+          <li data-i18n="teachers.f3"><strong>Monitorizare în timp real</strong> — modelele și progresul fiecărui elev.</li>
+          <li data-i18n="teachers.f4"><strong>Modul AI conversațional</strong> — sesiuni sigure, moderate, vizibile pentru tine.</li>
+        </ul>
+        <a href="#pilot" class="btn btn-primary" data-i18n="teachers.cta">Vreau acces de profesor</a>
+      </div>
+
+      <div class="split-visual">
+        <!-- Mockup dashboard în brand (swap cu screenshot real după re-deploy) -->
+        <div class="mockup mockup-browser" id="dashMock">
+          <div class="mock-bar"><span></span><span></span><span></span><em data-i18n="teachers.url">app.trainbot.moldluca.tech</em></div>
+          <div class="mock-body">
+            <div class="mock-side">
+              <span class="mock-logo">TB</span>
+              <span class="mock-nav is-on"></span><span class="mock-nav"></span><span class="mock-nav"></span><span class="mock-nav"></span>
+            </div>
+            <div class="mock-main">
+              <div class="mock-stats">
+                <div class="mock-stat"><b>3</b><i data-i18n="teachers.m1">Clase</i></div>
+                <div class="mock-stat"><b>68</b><i data-i18n="teachers.m2">Elevi</i></div>
+                <div class="mock-stat"><b>124</b><i data-i18n="teachers.m3">Modele</i></div>
+              </div>
+              <div class="mock-row"><span class="mock-avatar"></span><span class="mock-bar-line w80"></span><span class="mock-pill ok"></span></div>
+              <div class="mock-row"><span class="mock-avatar"></span><span class="mock-bar-line w60"></span><span class="mock-pill"></span></div>
+              <div class="mock-row"><span class="mock-avatar"></span><span class="mock-bar-line w90"></span><span class="mock-pill ok"></span></div>
+              <div class="mock-row"><span class="mock-avatar"></span><span class="mock-bar-line w50"></span><span class="mock-pill"></span></div>
+            </div>
+          </div>
+        </div>
+        <span class="visual-note" data-i18n="teachers.note">Mockup ilustrativ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KIDS / APP ============ -->
+  <section class="section kids" id="kids">
+    <div class="container split reverse">
+      <div class="split-visual">
+        <div class="mockup mockup-phone" id="phoneMock">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-mascot">
+              <div class="mascot mascot-sm" data-state="learning"><div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div></div>
+            </div>
+            <div class="phone-title" data-i18n="kids.appstate">Modelul învață…</div>
+            <div class="phone-progress"><span></span></div>
+            <div class="phone-chips"><span class="chip">🍎</span><span class="chip">🐱</span><span class="chip">🚗</span></div>
+            <div class="phone-btn" data-i18n="kids.appbtn">Antrenează</div>
+          </div>
+        </div>
+        <span class="visual-note" data-i18n="kids.note">App iOS · ilustrativ</span>
+      </div>
+
+      <div class="split-copy">
+        <span class="section-tag" data-i18n="kids.tag">Pentru copii</span>
+        <h2 class="section-title" data-i18n="kids.title">O aplicație în care AI-ul prinde viață.</h2>
+        <p class="section-lead" data-i18n="kids.lead">Pe iPhone sau iPad, copilul antrenează modele direct pe device — fără ca pozele lui să plece pe internet. Iar când vrea să „discute" cu un AI, totul e filtrat și sigur.</p>
+        <ul class="feature-list">
+          <li data-i18n="kids.f1"><strong>Antrenare on-device</strong> — CoreML, pozele rămân pe iPad.</li>
+          <li data-i18n="kids.f2"><strong>Mascotul TB</strong> — un ghid prietenos prin fiecare pas.</li>
+          <li data-i18n="kids.f3"><strong>Modul conversațional sigur</strong> — moderare AI pe ce intră și ce iese.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SAFETY / GDPR (dark) ============ -->
+  <section class="section safety" id="safety">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-tag light" data-i18n="safety.tag">Siguranță &amp; conformitate</span>
+        <h2 class="section-title" data-i18n="safety.title">Construit pentru clasă. Sigur prin design.</h2>
+        <p class="section-lead" data-i18n="safety.lead">Știm că o școală nu poate face compromisuri pe siguranța datelor copiilor. De aceea TrainBot e gândit GDPR-first.</p>
+      </div>
+      <div class="safety-grid">
+        <div class="safety-card">
+          <span class="safety-ic">🔒</span>
+          <h3 data-i18n="safety.c1t">Zero date personale de la copii</h3>
+          <p data-i18n="safety.c1p">Conturile elevilor sunt username + parolă create de profesor. Fără email, fără nume real obligatoriu.</p>
+        </div>
+        <div class="safety-card">
+          <span class="safety-ic">🛡️</span>
+          <h3 data-i18n="safety.c2t">Moderare AI dublă</h3>
+          <p data-i18n="safety.c2p">Filtrare pe cuvinte-cheie plus moderare AI, pe ce intră ȘI pe ce iese. La dubiu, mesajul e blocat.</p>
+        </div>
+        <div class="safety-card">
+          <span class="safety-ic">📋</span>
+          <h3 data-i18n="safety.c3t">GDPR-K &amp; DPA per școală</h3>
+          <p data-i18n="safety.c3p">Școala rămâne operatorul de date, în context educațional. Documentație de conformitate inclusă.</p>
+        </div>
+        <div class="safety-card">
+          <span class="safety-ic">📱</span>
+          <h3 data-i18n="safety.c4t">Pe device, în control</h3>
+          <p data-i18n="safety.c4p">Antrenarea modelelor se întâmplă pe iPad. Datele de antrenare nu pleacă de pe dispozitiv.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA / PILOT FORM ============ -->
+  <section class="section pilot" id="pilot">
+    <div class="container narrow">
+      <div class="pilot-card">
+        <div class="pilot-mascot">
+          <div class="mascot mascot-md" data-state="happy"><div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div></div>
+        </div>
+        <span class="section-tag" data-i18n="pilot.tag">Pilot gratuit</span>
+        <h2 class="section-title" data-i18n="pilot.title">Adu TrainBot în clasa ta.</h2>
+        <p class="section-lead" data-i18n="pilot.lead">Lasă-ne datele tale și revenim cu un plan de pilot pentru școala ta. Fără costuri, fără obligații.</p>
+
+        <!-- Formspree: înlocuiește FORM_ID după creare cont -->
+        <form class="pilot-form" id="pilotForm" action="https://formspree.io/f/FORM_ID" method="POST">
+          <div class="field">
+            <label for="name" data-i18n="pilot.name">Nume</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="school" data-i18n="pilot.school">Școală / organizație</label>
+            <input id="school" name="school" type="text" required />
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="pilot.email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="pilot.msg">Mesaj (opțional)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="pilot.submit">Trimite cererea</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">TrainBot</span>
+        <p data-i18n="footer.tag">AI hands-on pentru școli. Un proiect din ecosistemul moldluca.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://moldluca.tech" target="_blank" rel="noopener">moldluca.tech</a>
+        <a href="#how" data-i18n="nav.how">Cum funcționează</a>
+        <a href="#pilot" data-i18n="nav.cta">Cere un pilot</a>
+      </div>
+      <div class="footer-meta">
+        <span data-i18n="footer.status">Platformă în dezvoltare · 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

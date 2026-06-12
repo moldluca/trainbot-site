@@ -1,0 +1,6 @@
+# intern (design spec, note infra) — nu se publică în repo public
+docs/
+
+.DS_Store
+*.log
+node_modules/
