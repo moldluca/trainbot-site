@@ -5,7 +5,31 @@
 /* ---------- i18n dictionary (RO default, EN secondary) ---------- */
 const I18N = {
   ro: {
-    "nav.how": "Cum funcționează", "nav.teachers": "Pentru profesori", "nav.pricing": "Prețuri", "nav.safety": "Siguranță", "nav.cta": "Cere un pilot",
+    "nav.how": "Cum funcționează", "nav.learn": "Ce învață", "nav.teachers": "Pentru profesori", "nav.pricing": "Prețuri", "nav.faq": "FAQ", "nav.safety": "Siguranță", "nav.cta": "Cere un pilot",
+    "learn.tag": "Ce învață copiii", "learn.title": "Competențe reale pentru o lume cu AI.",
+    "learn.lead": "Dincolo de „a folosi” AI, copiii înțeleg cum funcționează — gândire critică, date și etică. Aliniat la competențele digitale și STEM.",
+    "learn.c1t": "Cum „învață” o mașină", "learn.c1p": "Înțeleg intuitiv ce e un model, date de antrenare și predicție — antrenând cu propriile mâini.",
+    "learn.c2t": "Clasificare & recunoaștere", "learn.c2p": "Construiesc clasificatoare de imagini și text și descoperă unde greșesc modelele.",
+    "learn.c3t": "Date bune, decizii corecte", "learn.c3p": "Învață că un model e atât de bun cât datele lui — și ce înseamnă bias și echitate.",
+    "learn.c4t": "AI conversațional, responsabil", "learn.c4p": "Experimentează cu modele de limbaj într-un cadru sigur și înțeleg limitele lor.",
+    "learn.c5t": "Gândire de cercetător", "learn.c5p": "Formulează ipoteze, testează, iterează — metoda științifică aplicată la AI.",
+    "learn.c6t": "Cetățenie digitală", "learn.c6p": "Confidențialitate, siguranță online și folosirea etică a tehnologiei.",
+    "proof.s1n": "7–14", "proof.s1l": "ani, vârsta potrivită", "proof.s2n": "100%", "proof.s2l": "antrenare pe device", "proof.s3n": "0", "proof.s3l": "date personale de la copii", "proof.s4n": "RO + EN", "proof.s4l": "limbi suportate",
+    "proof.tag": "Ce spun profesorii", "proof.title": "Construit împreună cu profesorii.",
+    "proof.q1": "„În sfârșit pot să le arăt copiilor ce e AI-ul, nu doar să le spun. Antrenează un model și li se aprinde becul.”",
+    "proof.a1n": "Profesor de robotică", "proof.a1r": "școală pilot",
+    "proof.q2": "„Dashboard-ul îmi arată exact unde s-a blocat fiecare elev. Pot să intervin la timp, nu la final.”",
+    "proof.a2n": "Coordonator STEM", "proof.a2r": "școală pilot",
+    "proof.q3": "„Zero date personale de la copii a fost decisiv pentru noi. Conducerea școlii a spus da imediat.”",
+    "proof.a3n": "Director adjunct", "proof.a3r": "școală pilot",
+    "proof.note": "Testimoniale ilustrative — vor fi înlocuite cu cele din pilot.",
+    "faq.tag": "Întrebări frecvente", "faq.title": "Ce vor să știe profesorii.",
+    "faq.q1": "De ce echipament am nevoie?", "faq.a1": "Un iPad sau iPhone (iOS 17+) per grup de elevi și un calculator/tabletă pentru tabloul de bord al profesorului. Funcționează și cu un singur iPad partajat în clasă.",
+    "faq.q2": "Cât durează să încep?", "faq.a2": "Sub 15 minute. Creezi o clasă, generezi conturile elevilor și dai prima temă. Te ajutăm la onboarding în pilot.",
+    "faq.q3": "Cum sunt protejate datele copiilor?", "faq.a3": "Conturile elevilor sunt username + parolă create de tine, fără email sau date personale. Antrenarea modelelor se face pe device. Suntem gândiți GDPR-first, cu DPA per școală.",
+    "faq.q4": "Trebuie ca elevii să știe să programeze?", "faq.a4": "Nu. Totul e vizual și practic — antrenezi modele cu exemple, fără cod. Potrivit de la 7 ani.",
+    "faq.q5": "Modulul AI conversațional e sigur?", "faq.a5": "Da. Fiecare mesaj trece prin filtrare pe cuvinte-cheie plus moderare AI, pe ce intră și ce iese. La dubiu, mesajul e blocat. Profesorul vede sesiunile.",
+    "faq.q6": "Cât costă după anul pilot?", "faq.a6": "Prețuri fixe: 590 lei/clasă/an sau 2.490 lei/an pentru toată școala. Reduceri pentru ONG-uri și școli din mediul rural.",
     "hero.eyebrow": "EdTech · AI pentru clasa ta",
     "hero.title": "Inteligența artificială,<br />predată cu mâinile.",
     "hero.sub": "Copiii de 7–14 ani își antrenează propriile modele AI direct pe iPad, în clasă. Tu, profesorul, vezi tot și controlezi tot. Sigur și conform GDPR.",
@@ -56,10 +80,35 @@ const I18N = {
     "pilot.lead": "Lasă-ne datele tale și revenim cu un plan de pilot pentru școala ta. Fără costuri, fără obligații.",
     "pilot.name": "Nume", "pilot.school": "Școală / organizație", "pilot.email": "Email", "pilot.msg": "Mesaj (opțional)", "pilot.submit": "Trimite cererea",
     "footer.tag": "AI hands-on pentru școli. Un proiect din ecosistemul moldluca.", "footer.status": "Platformă în dezvoltare · 2026",
+    "cookie.text": "Folosim cookie-uri doar pentru a înțelege traficul pe site (Google Analytics). Niciun cookie de marketing.", "cookie.accept": "Accept", "cookie.reject": "Refuz",
     "_form.sending": "Se trimite…", "_form.ok": "Mulțumim! Revenim curând. 🎉", "_form.err": "Ceva n-a mers. Scrie-ne direct pe email.",
   },
   en: {
-    "nav.how": "How it works", "nav.teachers": "For teachers", "nav.pricing": "Pricing", "nav.safety": "Safety", "nav.cta": "Request a pilot",
+    "nav.how": "How it works", "nav.learn": "What kids learn", "nav.teachers": "For teachers", "nav.pricing": "Pricing", "nav.faq": "FAQ", "nav.safety": "Safety", "nav.cta": "Request a pilot",
+    "learn.tag": "What kids learn", "learn.title": "Real skills for a world with AI.",
+    "learn.lead": "Beyond \"using\" AI, kids understand how it works — critical thinking, data and ethics. Aligned with digital and STEM competencies.",
+    "learn.c1t": "How a machine \"learns\"", "learn.c1p": "They intuitively grasp what a model, training data and prediction are — by training with their own hands.",
+    "learn.c2t": "Classification & recognition", "learn.c2p": "They build image and text classifiers and discover where models go wrong.",
+    "learn.c3t": "Good data, fair decisions", "learn.c3p": "They learn a model is only as good as its data — and what bias and fairness mean.",
+    "learn.c4t": "Responsible conversational AI", "learn.c4p": "They experiment with language models in a safe setting and understand their limits.",
+    "learn.c5t": "A researcher's mindset", "learn.c5p": "They form hypotheses, test, iterate — the scientific method applied to AI.",
+    "learn.c6t": "Digital citizenship", "learn.c6p": "Privacy, online safety and the ethical use of technology.",
+    "proof.s1n": "7–14", "proof.s1l": "the right age", "proof.s2n": "100%", "proof.s2l": "on-device training", "proof.s3n": "0", "proof.s3l": "personal data from kids", "proof.s4n": "RO + EN", "proof.s4l": "languages supported",
+    "proof.tag": "What teachers say", "proof.title": "Built together with teachers.",
+    "proof.q1": "\"I can finally show kids what AI is, not just tell them. They train a model and the lightbulb goes on.\"",
+    "proof.a1n": "Robotics teacher", "proof.a1r": "pilot school",
+    "proof.q2": "\"The dashboard shows me exactly where each student got stuck. I can step in on time, not at the end.\"",
+    "proof.a2n": "STEM coordinator", "proof.a2r": "pilot school",
+    "proof.q3": "\"Zero personal data from kids was decisive for us. School leadership said yes immediately.\"",
+    "proof.a3n": "Deputy head", "proof.a3r": "pilot school",
+    "proof.note": "Illustrative testimonials — to be replaced with real ones from the pilot.",
+    "faq.tag": "Frequently asked", "faq.title": "What teachers want to know.",
+    "faq.q1": "What equipment do I need?", "faq.a1": "An iPad or iPhone (iOS 17+) per student group, and a computer/tablet for the teacher dashboard. It works even with a single iPad shared in class.",
+    "faq.q2": "How long to get started?", "faq.a2": "Under 15 minutes. Create a class, generate student accounts and set the first assignment. We help with onboarding during the pilot.",
+    "faq.q3": "How is children's data protected?", "faq.a3": "Student accounts are username + password created by you, with no email or personal data. Model training happens on the device. We're GDPR-first, with a per-school DPA.",
+    "faq.q4": "Do students need to know how to code?", "faq.a4": "No. Everything is visual and hands-on — you train models with examples, no code. Suitable from age 7.",
+    "faq.q5": "Is the conversational AI module safe?", "faq.a5": "Yes. Every message goes through keyword filtering plus AI moderation, on both input and output. When in doubt, the message is blocked. The teacher sees the sessions.",
+    "faq.q6": "What does it cost after the pilot year?", "faq.a6": "Fixed prices: 590 RON/class/year or 2,490 RON/year for the whole school. Discounts for NGOs and rural schools.",
     "hero.eyebrow": "EdTech · AI for your classroom",
     "hero.title": "Artificial intelligence,<br />taught hands-on.",
     "hero.sub": "Kids aged 7–14 train their own AI models right on an iPad, in class. You, the teacher, see everything and stay in control. Safe and GDPR-compliant.",
@@ -110,6 +159,7 @@ const I18N = {
     "pilot.lead": "Leave us your details and we'll come back with a pilot plan for your school. No cost, no obligation.",
     "pilot.name": "Name", "pilot.school": "School / organization", "pilot.email": "Email", "pilot.msg": "Message (optional)", "pilot.submit": "Send request",
     "footer.tag": "Hands-on AI for schools. A project from the moldluca ecosystem.", "footer.status": "Platform in development · 2026",
+    "cookie.text": "We use cookies only to understand site traffic (Google Analytics). No marketing cookies.", "cookie.accept": "Accept", "cookie.reject": "Decline",
     "_form.sending": "Sending…", "_form.ok": "Thanks! We'll be in touch soon. 🎉", "_form.err": "Something went wrong. Email us directly.",
   },
 };
@@ -144,12 +194,14 @@ onScroll();
 
 /* ---------- scroll reveal ---------- */
 const revealEls = [
-  ".problem-card", ".step", ".split-copy", ".split-visual",
-  ".safety-card", ".price-card", ".pilot-card", ".section-head", ".problem .section-lead",
+  ".problem-card", ".step", ".learn-card", ".split-copy", ".split-visual",
+  ".proof-stats", ".proof-card", ".safety-card", ".price-card", ".faq-item",
+  ".pilot-card", ".section-head", ".problem .section-lead",
 ];
+const staggerSel = ["problem-card", "step", "learn-card", "safety-card", "price-card", "proof-card"];
 document.querySelectorAll(revealEls.join(",")).forEach((el, i) => {
   el.classList.add("reveal");
-  if (el.classList.contains("problem-card") || el.classList.contains("step") || el.classList.contains("safety-card") || el.classList.contains("price-card")) {
+  if (staggerSel.some((c) => el.classList.contains(c))) {
     el.classList.add(["d1", "d2", "d3"][i % 3]);
   }
 });
@@ -221,6 +273,29 @@ if (form) {
     }
   });
 }
+
+/* ---------- cookie consent + Google Analytics (gated) ---------- */
+const GA_ID = "G-XXXXXXXXXX"; // TODO: înlocuiește cu ID-ul real GA4 (proprietate dedicată trainbot)
+function loadGA() {
+  if (!GA_ID || GA_ID.includes("XXXX")) return; // placeholder → nu încărca
+  const s = document.createElement("script");
+  s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", GA_ID, { anonymize_ip: true });
+}
+const cookieBanner = document.getElementById("cookieBanner");
+const consent = localStorage.getItem("tb_consent");
+if (consent === "granted") loadGA();
+else if (consent !== "denied" && cookieBanner) cookieBanner.hidden = false;
+document.getElementById("cookieAccept")?.addEventListener("click", () => {
+  localStorage.setItem("tb_consent", "granted"); if (cookieBanner) cookieBanner.hidden = true; loadGA();
+});
+document.getElementById("cookieReject")?.addEventListener("click", () => {
+  localStorage.setItem("tb_consent", "denied"); if (cookieBanner) cookieBanner.hidden = true;
+});
 
 /* ---------- init ---------- */
 applyLang(currentLang);
