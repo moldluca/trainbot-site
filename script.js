@@ -5,7 +5,7 @@
 /* ---------- i18n dictionary (RO default, EN secondary) ---------- */
 const I18N = {
   ro: {
-    "nav.how": "Cum funcționează", "nav.teachers": "Pentru profesori", "nav.safety": "Siguranță", "nav.cta": "Cere un pilot",
+    "nav.how": "Cum funcționează", "nav.teachers": "Pentru profesori", "nav.pricing": "Prețuri", "nav.safety": "Siguranță", "nav.cta": "Cere un pilot",
     "hero.eyebrow": "EdTech · AI pentru clasa ta",
     "hero.title": "Inteligența artificială,<br />predată cu mâinile.",
     "hero.sub": "Copiii de 7–14 ani își antrenează propriile modele AI direct pe iPad, în clasă. Tu, profesorul, vezi tot și controlezi tot. Sigur și conform GDPR.",
@@ -42,6 +42,16 @@ const I18N = {
     "safety.c2t": "Moderare AI dublă", "safety.c2p": "Filtrare pe cuvinte-cheie plus moderare AI, pe ce intră ȘI pe ce iese. La dubiu, mesajul e blocat.",
     "safety.c3t": "GDPR-K & DPA per școală", "safety.c3p": "Școala rămâne operatorul de date, în context educațional. Documentație de conformitate inclusă.",
     "safety.c4t": "Pe device, în control", "safety.c4p": "Antrenarea modelelor se întâmplă pe iPad. Datele de antrenare nu pleacă de pe dispozitiv.",
+    "pricing.tag": "Prețuri", "pricing.title": "Primul an e pe noi.",
+    "pricing.lead": "Începe cu un an pilot gratuit pentru o clasă. Apoi alegi planul potrivit școlii tale — prețuri fixe, fără surprize.",
+    "pricing.badge": "Recomandat",
+    "pricing.p1name": "Pilot", "pricing.p1price": "Gratuit", "pricing.p1per": "primul an", "pricing.p1desc": "Pentru o clasă, ca să testezi totul fără risc.",
+    "pricing.p1f1": "1 clasă, până la 30 de elevi", "pricing.p1f2": "Toate funcțiile incluse", "pricing.p1f3": "Onboarding și suport la start", "pricing.p1f4": "Fără card, fără obligații", "pricing.p1cta": "Începe pilotul",
+    "pricing.p2name": "Clasă", "pricing.p2price": "590 lei", "pricing.p2per": "/ clasă / an", "pricing.p2desc": "Pentru profesorul care vrea AI în clasa lui.",
+    "pricing.p2f1": "1 clasă, până la 35 de elevi", "pricing.p2f2": "Dashboard complet + teme", "pricing.p2f3": "Modul AI conversațional", "pricing.p2f4": "Suport pe email", "pricing.p2cta": "Alege Clasă",
+    "pricing.p3name": "Școală", "pricing.p3price": "2.490 lei", "pricing.p3per": "/ an", "pricing.p3desc": "Pentru o școală întreagă, cu clase nelimitate.",
+    "pricing.p3f1": "Clase și profesori nelimitați", "pricing.p3f2": "Training pentru profesori", "pricing.p3f3": "DPA și suport prioritar", "pricing.p3f4": "Panou de administrare", "pricing.p3cta": "Contactează-ne",
+    "pricing.foot": "Prețuri orientative, fără TVA. Reduceri pentru ONG-uri și școli din mediul rural.",
     "pilot.tag": "Pilot gratuit", "pilot.title": "Adu TrainBot în clasa ta.",
     "pilot.lead": "Lasă-ne datele tale și revenim cu un plan de pilot pentru școala ta. Fără costuri, fără obligații.",
     "pilot.name": "Nume", "pilot.school": "Școală / organizație", "pilot.email": "Email", "pilot.msg": "Mesaj (opțional)", "pilot.submit": "Trimite cererea",
@@ -49,7 +59,7 @@ const I18N = {
     "_form.sending": "Se trimite…", "_form.ok": "Mulțumim! Revenim curând. 🎉", "_form.err": "Ceva n-a mers. Scrie-ne direct pe email.",
   },
   en: {
-    "nav.how": "How it works", "nav.teachers": "For teachers", "nav.safety": "Safety", "nav.cta": "Request a pilot",
+    "nav.how": "How it works", "nav.teachers": "For teachers", "nav.pricing": "Pricing", "nav.safety": "Safety", "nav.cta": "Request a pilot",
     "hero.eyebrow": "EdTech · AI for your classroom",
     "hero.title": "Artificial intelligence,<br />taught hands-on.",
     "hero.sub": "Kids aged 7–14 train their own AI models right on an iPad, in class. You, the teacher, see everything and stay in control. Safe and GDPR-compliant.",
@@ -86,6 +96,16 @@ const I18N = {
     "safety.c2t": "Double AI moderation", "safety.c2p": "Keyword filtering plus AI moderation, on both input AND output. When in doubt, the message is blocked.",
     "safety.c3t": "GDPR-K & per-school DPA", "safety.c3p": "The school remains the data controller, in an educational context. Compliance documentation included.",
     "safety.c4t": "On-device, in control", "safety.c4p": "Model training happens on the iPad. Training data never leaves the device.",
+    "pricing.tag": "Pricing", "pricing.title": "The first year is on us.",
+    "pricing.lead": "Start with a free one-year pilot for a class. Then pick the plan that fits your school — fixed prices, no surprises.",
+    "pricing.badge": "Recommended",
+    "pricing.p1name": "Pilot", "pricing.p1price": "Free", "pricing.p1per": "first year", "pricing.p1desc": "For one class, to test everything risk-free.",
+    "pricing.p1f1": "1 class, up to 30 students", "pricing.p1f2": "All features included", "pricing.p1f3": "Onboarding and launch support", "pricing.p1f4": "No card, no obligation", "pricing.p1cta": "Start the pilot",
+    "pricing.p2name": "Class", "pricing.p2price": "590 RON", "pricing.p2per": "/ class / year", "pricing.p2desc": "For the teacher who wants AI in their classroom.",
+    "pricing.p2f1": "1 class, up to 35 students", "pricing.p2f2": "Full dashboard + assignments", "pricing.p2f3": "Conversational AI module", "pricing.p2f4": "Email support", "pricing.p2cta": "Choose Class",
+    "pricing.p3name": "School", "pricing.p3price": "2,490 RON", "pricing.p3per": "/ year", "pricing.p3desc": "For a whole school, with unlimited classes.",
+    "pricing.p3f1": "Unlimited classes and teachers", "pricing.p3f2": "Teacher training", "pricing.p3f3": "DPA and priority support", "pricing.p3f4": "Admin panel", "pricing.p3cta": "Contact us",
+    "pricing.foot": "Indicative prices, VAT excluded. Discounts for NGOs and rural schools.",
     "pilot.tag": "Free pilot", "pilot.title": "Bring TrainBot to your classroom.",
     "pilot.lead": "Leave us your details and we'll come back with a pilot plan for your school. No cost, no obligation.",
     "pilot.name": "Name", "pilot.school": "School / organization", "pilot.email": "Email", "pilot.msg": "Message (optional)", "pilot.submit": "Send request",
@@ -125,11 +145,11 @@ onScroll();
 /* ---------- scroll reveal ---------- */
 const revealEls = [
   ".problem-card", ".step", ".split-copy", ".split-visual",
-  ".safety-card", ".pilot-card", ".section-head", ".problem .section-lead",
+  ".safety-card", ".price-card", ".pilot-card", ".section-head", ".problem .section-lead",
 ];
 document.querySelectorAll(revealEls.join(",")).forEach((el, i) => {
   el.classList.add("reveal");
-  if (el.classList.contains("problem-card") || el.classList.contains("step") || el.classList.contains("safety-card")) {
+  if (el.classList.contains("problem-card") || el.classList.contains("step") || el.classList.contains("safety-card") || el.classList.contains("price-card")) {
     el.classList.add(["d1", "d2", "d3"][i % 3]);
   }
 });
@@ -149,21 +169,28 @@ if (heroMascot) {
   heroMascot.parentElement.addEventListener("mouseleave", () => { heroMascot.dataset.state = cycle[ci]; });
 }
 
-/* ---------- how section: mascot + active step driven by scroll ---------- */
+/* ---------- how section: mascot + active step auto-cycle while in view ---------- */
 const steps = [...document.querySelectorAll(".how .step")];
 const howMascot = document.getElementById("howMascot");
-if (steps.length) {
-  const stepIo = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) {
-        steps.forEach((s) => s.classList.remove("is-active"));
-        e.target.classList.add("is-active");
-        if (howMascot) howMascot.dataset.state = e.target.dataset.mascot || "idle";
-      }
-    }),
-    { threshold: 0.6 }
+const howSection = document.getElementById("how");
+if (steps.length && howSection) {
+  let idx = 0, timer = null;
+  const setActive = (i) => {
+    steps.forEach((s, k) => s.classList.toggle("is-active", k === i));
+    if (howMascot) howMascot.dataset.state = steps[i].dataset.mascot || "idle";
+  };
+  const start = () => { if (timer) return; setActive(idx); timer = setInterval(() => { idx = (idx + 1) % steps.length; setActive(idx); }, 2400); };
+  const stop = () => { clearInterval(timer); timer = null; };
+  const howIo = new IntersectionObserver(
+    (entries) => entries.forEach((e) => (e.isIntersecting ? start() : stop())),
+    { threshold: 0.3 }
   );
-  steps.forEach((s) => stepIo.observe(s));
+  howIo.observe(howSection);
+  // hover pauses auto-cycle and focuses that step
+  steps.forEach((s, i) => {
+    s.addEventListener("mouseenter", () => { stop(); idx = i; setActive(i); });
+    s.addEventListener("mouseleave", () => start());
+  });
 }
 
 /* ---------- pilot form (Formspree) ---------- */

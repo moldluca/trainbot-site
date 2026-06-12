@@ -50,6 +50,7 @@
     <nav class="nav-links">
       <a href="#how" data-i18n="nav.how">Cum funcționează</a>
       <a href="#teachers" data-i18n="nav.teachers">Pentru profesori</a>
+      <a href="#pricing" data-i18n="nav.pricing">Prețuri</a>
       <a href="#safety" data-i18n="nav.safety">Siguranță</a>
     </nav>
 
@@ -132,6 +133,12 @@
         <h2 class="section-title" data-i18n="how.title">Trei pași. Un model antrenat de copil.</h2>
       </div>
 
+      <div class="how-mascot" aria-hidden="true">
+        <div class="mascot mascot-md" id="howMascot" data-state="idle">
+          <div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div>
+        </div>
+      </div>
+
       <div class="steps">
         <article class="step" data-mascot="learning">
           <span class="step-num">01</span>
@@ -148,13 +155,6 @@
           <h3 data-i18n="how.s3t">Profesorul vede tot</h3>
           <p data-i18n="how.s3p">În tabloul de bord, vezi clasele, temele și progresul fiecărui elev — ce model a construit, cât de bine performează, unde s-a blocat.</p>
         </article>
-
-        <!-- Mascot guide that follows the steps -->
-        <div class="how-mascot" aria-hidden="true">
-          <div class="mascot mascot-md" id="howMascot" data-state="idle">
-            <div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -264,6 +264,63 @@
           <p data-i18n="safety.c4p">Antrenarea modelelor se întâmplă pe iPad. Datele de antrenare nu pleacă de pe dispozitiv.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-tag" data-i18n="pricing.tag">Prețuri</span>
+        <h2 class="section-title" data-i18n="pricing.title">Primul an e pe noi.</h2>
+        <p class="section-lead" data-i18n="pricing.lead">Începe cu un an pilot gratuit pentru o clasă. Apoi alegi planul potrivit școlii tale — prețuri fixe, fără surprize.</p>
+      </div>
+
+      <div class="price-grid">
+        <!-- Pilot -->
+        <article class="price-card featured">
+          <span class="price-badge" data-i18n="pricing.badge">Recomandat</span>
+          <h3 class="price-name" data-i18n="pricing.p1name">Pilot</h3>
+          <div class="price-amount"><span class="price-big" data-i18n="pricing.p1price">Gratuit</span><span class="price-per" data-i18n="pricing.p1per">primul an</span></div>
+          <p class="price-desc" data-i18n="pricing.p1desc">Pentru o clasă, ca să testezi totul fără risc.</p>
+          <ul class="price-feats">
+            <li data-i18n="pricing.p1f1">1 clasă, până la 30 de elevi</li>
+            <li data-i18n="pricing.p1f2">Toate funcțiile incluse</li>
+            <li data-i18n="pricing.p1f3">Onboarding și suport la start</li>
+            <li data-i18n="pricing.p1f4">Fără card, fără obligații</li>
+          </ul>
+          <a href="#pilot" class="btn btn-primary btn-block" data-i18n="pricing.p1cta">Începe pilotul</a>
+        </article>
+
+        <!-- Clasă -->
+        <article class="price-card">
+          <h3 class="price-name" data-i18n="pricing.p2name">Clasă</h3>
+          <div class="price-amount"><span class="price-big" data-i18n="pricing.p2price">590 lei</span><span class="price-per" data-i18n="pricing.p2per">/ clasă / an</span></div>
+          <p class="price-desc" data-i18n="pricing.p2desc">Pentru profesorul care vrea AI în clasa lui.</p>
+          <ul class="price-feats">
+            <li data-i18n="pricing.p2f1">1 clasă, până la 35 de elevi</li>
+            <li data-i18n="pricing.p2f2">Dashboard complet + teme</li>
+            <li data-i18n="pricing.p2f3">Modul AI conversațional</li>
+            <li data-i18n="pricing.p2f4">Suport pe email</li>
+          </ul>
+          <a href="#pilot" class="btn btn-ghost btn-block" data-i18n="pricing.p2cta">Alege Clasă</a>
+        </article>
+
+        <!-- Școală -->
+        <article class="price-card">
+          <h3 class="price-name" data-i18n="pricing.p3name">Școală</h3>
+          <div class="price-amount"><span class="price-big" data-i18n="pricing.p3price">2.490 lei</span><span class="price-per" data-i18n="pricing.p3per">/ an</span></div>
+          <p class="price-desc" data-i18n="pricing.p3desc">Pentru o școală întreagă, cu clase nelimitate.</p>
+          <ul class="price-feats">
+            <li data-i18n="pricing.p3f1">Clase și profesori nelimitați</li>
+            <li data-i18n="pricing.p3f2">Training pentru profesori</li>
+            <li data-i18n="pricing.p3f3">DPA și suport prioritar</li>
+            <li data-i18n="pricing.p3f4">Panou de administrare</li>
+          </ul>
+          <a href="#pilot" class="btn btn-ghost btn-block" data-i18n="pricing.p3cta">Contactează-ne</a>
+        </article>
+      </div>
+      <p class="price-foot" data-i18n="pricing.foot">Prețuri orientative, fără TVA. Reduceri pentru ONG-uri și școli din mediul rural.</p>
     </div>
   </section>
 
