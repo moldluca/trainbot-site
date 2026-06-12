@@ -206,7 +206,7 @@ if (form) {
     if (!action || action.includes("FORM_ID")) {
       const fd = new FormData(form);
       const body = encodeURIComponent(`Nume: ${fd.get("name")}\nȘcoală: ${fd.get("school")}\nEmail: ${fd.get("email")}\n\n${fd.get("message") || ""}`);
-      window.location.href = `mailto:moldemil@gmail.com?subject=${encodeURIComponent("Cerere pilot TrainBot")}&body=${body}`;
+      window.location.href = `mailto:moldluca@gmail.com?subject=${encodeURIComponent("Cerere pilot TrainBot")}&body=${body}`;
       return;
     }
 
