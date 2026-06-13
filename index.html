@@ -35,6 +35,7 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237B6CF0'/><stop offset='1' stop-color='%236B86F0'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='url(%23g)'/><rect x='34' y='38' width='10' height='24' rx='5' fill='white'/><rect x='56' y='38' width='10' height='24' rx='5' fill='white'/></svg>" />
   <link rel="apple-touch-icon" href="images/icon.svg" />
+  <link rel="manifest" href="manifest.json" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -171,6 +172,51 @@
     </div>
   </section>
 
+  <!-- ============ MINI-DEMO INTERACTIV ============ -->
+  <section class="section demo" id="demo">
+    <div class="container narrow">
+      <div class="section-head center">
+        <span class="section-tag" data-i18n="demo.tag">Încearcă tu</span>
+        <h2 class="section-title" data-i18n="demo.title">Antrenează un mini-model. Chiar acum.</h2>
+        <p class="section-lead" data-i18n="demo.lead">Exact ce face un copil în TrainBot: dă exemple, antrenează, testează. Sortează imaginile în grupa potrivită.</p>
+      </div>
+
+      <div class="demo-card" id="demoCard">
+        <div class="demo-mascot" aria-hidden="true">
+          <div class="mascot mascot-sm" id="demoMascot" data-state="idle"><div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div></div>
+        </div>
+
+        <!-- STAGE 1: sortare -->
+        <div class="demo-stage" id="demoStage1">
+          <p class="demo-instr"><span class="demo-step-n">1</span> <span data-i18n="demo.s1">Selectează o imagine, apoi grupa ei:</span></p>
+          <div class="demo-palette" id="demoPalette"></div>
+          <div class="demo-buckets">
+            <button class="demo-bucket" data-bucket="fruit"><h4 data-i18n="demo.bfruit">🍎 Fructe</h4><div class="bucket-items" id="bucketfruit"></div></button>
+            <button class="demo-bucket" data-bucket="animal"><h4 data-i18n="demo.banimal">🐾 Animale</h4><div class="bucket-items" id="bucketanimal"></div></button>
+          </div>
+          <button class="btn btn-primary btn-block" id="demoTrain" disabled data-i18n="demo.train">Antrenează modelul</button>
+        </div>
+
+        <!-- STAGE 2: antrenare -->
+        <div class="demo-stage" id="demoStage2" hidden>
+          <p class="demo-instr" data-i18n="demo.training">Modelul învață din exemplele tale…</p>
+          <div class="demo-progress"><span id="demoBar"></span></div>
+        </div>
+
+        <!-- STAGE 3: test -->
+        <div class="demo-stage" id="demoStage3" hidden>
+          <p class="demo-instr"><span class="demo-step-n">2</span> <span data-i18n="demo.s3">Acum testează-l cu o imagine nouă:</span></p>
+          <div class="demo-test">
+            <div class="demo-test-item" id="demoTestItem">🍓</div>
+            <button class="btn btn-primary" id="demoGuess" data-i18n="demo.guess">Ce e asta?</button>
+          </div>
+          <div class="demo-result" id="demoResult" hidden></div>
+          <button class="btn btn-ghost btn-sm" id="demoReset" data-i18n="demo.reset">↺ De la început</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CE ÎNVAȚĂ COPIII ============ -->
   <section class="section learn" id="learn">
     <div class="container">
@@ -294,6 +340,25 @@
         </figure>
       </div>
       <p class="proof-note" data-i18n="proof.note">Testimoniale ilustrative — vor fi înlocuite cu cele din pilot.</p>
+    </div>
+  </section>
+
+  <!-- ============ DESPRE / ECHIPA ============ -->
+  <section class="section about" id="about">
+    <div class="container narrow">
+      <div class="about-card">
+        <div class="about-mascot" aria-hidden="true">
+          <div class="mascot mascot-md" data-state="idle"><div class="mascot-head"><div class="mascot-eyes"><span class="eye eye-l"></span><span class="eye eye-r"></span></div></div></div>
+        </div>
+        <span class="section-tag" data-i18n="about.tag">Despre noi</span>
+        <h2 class="section-title" data-i18n="about.title">Construit în România, pentru profesori din România.</h2>
+        <p class="section-lead" data-i18n="about.p1">TrainBot s-a născut din pasiunea pentru robotică și educație, în ecosistemul Crocorobo &amp; Perpetuum Mobile. Credem că fiecare copil ar trebui să înțeleagă inteligența artificială — nu doar să o folosească.</p>
+        <p class="about-p2" data-i18n="about.p2">Construim un instrument pe care l-am fi vrut noi în școală: practic, sigur și gândit pentru sala de clasă reală, cu profesorul în centru.</p>
+        <div class="about-meta">
+          <span data-i18n="about.m1">🇷🇴 Făcut în România</span>
+          <span data-i18n="about.m2">🤝 Parte din Crocorobo / Perpetuum Mobile</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -453,9 +518,12 @@
         <p data-i18n="footer.tag">AI hands-on pentru școli. Un proiect din ecosistemul moldluca.</p>
       </div>
       <div class="footer-links">
-        <a href="https://moldluca.tech" target="_blank" rel="noopener">moldluca.tech</a>
-        <a href="#how" data-i18n="nav.how">Cum funcționează</a>
+        <a href="#about" data-i18n="about.tag">Despre noi</a>
         <a href="#pilot" data-i18n="nav.cta">Cere un pilot</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Confidențialitate</a>
+        <a href="terms.html" data-i18n="footer.terms">Termeni</a>
+        <a href="dpa.html" data-i18n="footer.dpa">DPA</a>
+        <a href="https://moldluca.tech" target="_blank" rel="noopener">moldluca.tech</a>
       </div>
       <div class="footer-meta">
         <span data-i18n="footer.status">Platformă în dezvoltare · 2026</span>

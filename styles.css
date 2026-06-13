@@ -396,6 +396,38 @@ ul { list-style: none; }
 .footer-links a:hover { color: var(--purple-blue); }
 .footer-meta { font-size: .82rem; color: rgba(255,255,255,.45); }
 
+/* ---------- DEMO interactiv ---------- */
+.demo-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg); padding: clamp(28px, 4vw, 48px); position: relative; overflow: hidden;
+}
+.demo-card .demo-mascot { position: absolute; top: 22px; right: 26px; margin: 0; }
+.demo-instr { font-weight: 600; color: var(--ink); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+.demo-step-n { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--grad); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: .9rem; flex-shrink: 0; }
+.demo-palette { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; min-height: 56px; }
+.demo-chip {
+  width: 52px; height: 52px; border-radius: 14px; border: 2px solid var(--line); background: var(--cream);
+  font-size: 1.7rem; display: grid; place-items: center; cursor: pointer; transition: transform .15s, border-color .2s, box-shadow .2s;
+}
+.demo-chip:hover { transform: translateY(-3px); }
+.demo-chip.selected { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(123,108,240,.18); transform: translateY(-3px) scale(1.05); }
+.demo-buckets { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+.demo-bucket { text-align: left; background: #faf9ff; border: 2px dashed var(--line); border-radius: var(--r-md); padding: 16px; cursor: pointer; transition: border-color .2s, background .2s; font: inherit; }
+.demo-bucket:hover { border-color: var(--purple); background: #f4f1ff; }
+.demo-bucket.armed { border-style: solid; border-color: var(--purple); }
+.demo-bucket h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; margin-bottom: 10px; }
+.bucket-items { display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; }
+.bucket-items span { font-size: 1.4rem; animation: chipDrop .25s ease; }
+@keyframes chipDrop { from { transform: scale(0); } to { transform: scale(1); } }
+.demo-progress { height: 12px; background: var(--lavender); border-radius: 999px; overflow: hidden; margin-top: 14px; }
+.demo-progress span { display: block; height: 100%; width: 0; background: var(--grad); border-radius: 999px; transition: width 1.6s ease; }
+.demo-test { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.demo-test-item { width: 76px; height: 76px; border-radius: 18px; background: var(--cream); border: 2px solid var(--line); display: grid; place-items: center; font-size: 2.4rem; }
+.demo-result { border-radius: var(--r-md); padding: 16px 18px; margin-bottom: 18px; font-weight: 600; animation: faqIn .35s ease; }
+.demo-result.ok { background: rgba(95,208,160,.14); color: #1f8f63; }
+.demo-result.no { background: rgba(214,83,106,.12); color: #c2415a; }
+.demo-result b { font-family: var(--font-display); }
+
 /* ---------- LEARN (ce învață copiii) ---------- */
 .learn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .learn-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: 28px 24px; transition: transform .3s, box-shadow .3s; }
@@ -422,6 +454,14 @@ ul { list-style: none; }
 .proof-card figcaption i { font-style: normal; font-size: .85rem; color: var(--ink-soft); }
 .proof-note { text-align: center; margin-top: 22px; font-size: .82rem; color: var(--ink-soft); opacity: .7; }
 
+/* ---------- ABOUT (despre) ---------- */
+.about-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl); padding: clamp(34px, 5vw, 60px); box-shadow: var(--shadow-md); text-align: center; position: relative; }
+.about-mascot { display: flex; justify-content: center; margin-bottom: 14px; }
+.about-card .section-lead { margin: 0 auto 18px; }
+.about-p2 { color: var(--ink-soft); max-width: 560px; margin: 0 auto 26px; }
+.about-meta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.about-meta span { font-size: .9rem; font-weight: 600; color: var(--purple-deep); background: var(--lavender); padding: 8px 16px; border-radius: 999px; }
+
 /* ---------- FAQ ---------- */
 .faq-list { display: flex; flex-direction: column; gap: 12px; }
 .faq-item { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: 4px 24px; transition: box-shadow .3s, border-color .3s; }
@@ -433,6 +473,21 @@ ul { list-style: none; }
 .faq-item summary:focus-visible { color: var(--purple-deep); }
 .faq-item p { color: var(--ink-soft); padding: 0 0 18px; margin-top: -4px; animation: faqIn .3s ease; }
 @keyframes faqIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- LEGAL PAGES ---------- */
+.legal-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 16px clamp(20px, 4vw, 48px); background: rgba(244,242,251,.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.legal-back { font-weight: 600; color: var(--purple-deep); font-size: .95rem; }
+.legal-back:hover { text-decoration: underline; }
+.legal-main { max-width: 800px; margin: 0 auto; padding: 130px 26px 80px; position: relative; z-index: 2; }
+.legal-main h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.02em; margin-bottom: 8px; }
+.legal-updated { color: var(--ink-soft); font-size: .9rem; margin-bottom: 24px; }
+.legal-note { background: #fff7e6; border: 1px solid #f0d68a; color: #8a6d1f; border-radius: var(--r-md); padding: 14px 18px; font-size: .9rem; margin-bottom: 36px; }
+.legal-content h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; margin: 34px 0 12px; }
+.legal-content h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; margin: 22px 0 8px; }
+.legal-content p, .legal-content li { color: var(--ink-soft); margin-bottom: 12px; line-height: 1.7; }
+.legal-content ul { padding-left: 22px; margin-bottom: 12px; list-style: disc; }
+.legal-content strong { color: var(--ink); }
+.legal-content a { color: var(--purple-deep); text-decoration: underline; }
 
 /* ---------- COOKIE CONSENT ---------- */
 .cookie-banner {

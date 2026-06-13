@@ -23,6 +23,10 @@ const I18N = {
     "proof.q3": "„Zero date personale de la copii a fost decisiv pentru noi. Conducerea școlii a spus da imediat.”",
     "proof.a3n": "Director adjunct", "proof.a3r": "școală pilot",
     "proof.note": "Testimoniale ilustrative — vor fi înlocuite cu cele din pilot.",
+    "about.tag": "Despre noi", "about.title": "Construit în România, pentru profesori din România.",
+    "about.p1": "TrainBot s-a născut din pasiunea pentru robotică și educație, în ecosistemul Crocorobo & Perpetuum Mobile. Credem că fiecare copil ar trebui să înțeleagă inteligența artificială — nu doar să o folosească.",
+    "about.p2": "Construim un instrument pe care l-am fi vrut noi în școală: practic, sigur și gândit pentru sala de clasă reală, cu profesorul în centru.",
+    "about.m1": "🇷🇴 Făcut în România", "about.m2": "🤝 Parte din Crocorobo / Perpetuum Mobile",
     "faq.tag": "Întrebări frecvente", "faq.title": "Ce vor să știe profesorii.",
     "faq.q1": "De ce echipament am nevoie?", "faq.a1": "Un iPad sau iPhone (iOS 17+) per grup de elevi și un calculator/tabletă pentru tabloul de bord al profesorului. Funcționează și cu un singur iPad partajat în clasă.",
     "faq.q2": "Cât durează să încep?", "faq.a2": "Sub 15 minute. Creezi o clasă, generezi conturile elevilor și dai prima temă. Te ajutăm la onboarding în pilot.",
@@ -46,6 +50,13 @@ const I18N = {
     "how.s1t": "Copilul antrenează", "how.s1p": "Pe iPad, elevul colectează exemple (poze sau text) și antrenează un model real, on-device, cu CoreML. Vede cum modelul „învață” în timp real.",
     "how.s2t": "Copilul testează", "how.s2p": "Apoi îl pune la încercare cu exemple noi. „A ghicit corect?” Butonul de feedback îl învață că un model bun cere date bune.",
     "how.s3t": "Profesorul vede tot", "how.s3p": "În tabloul de bord, vezi clasele, temele și progresul fiecărui elev — ce model a construit, cât de bine performează, unde s-a blocat.",
+    "demo.tag": "Încearcă tu", "demo.title": "Antrenează un mini-model. Chiar acum.",
+    "demo.lead": "Exact ce face un copil în TrainBot: dă exemple, antrenează, testează. Sortează imaginile în grupa potrivită.",
+    "demo.s1": "Selectează o imagine, apoi grupa ei:", "demo.bfruit": "🍎 Fructe", "demo.banimal": "🐾 Animale",
+    "demo.train": "Antrenează modelul", "demo.training": "Modelul învață din exemplele tale…", "demo.s3": "Acum testează-l cu o imagine nouă:",
+    "demo.guess": "Ce e asta?", "demo.reset": "↺ De la început",
+    "demo.correct": "Corect! Modelul zice {label} — încredere {conf}%. Date bune → predicții bune.",
+    "demo.wrong": "Modelul zice {label} ({conf}%). Hmm — verifică cum ai sortat exemplele. Așa învață și copiii despre bias!",
     "teachers.tag": "Pentru profesori", "teachers.title": "Tabloul de bord care îți dă controlul.",
     "teachers.lead": "Creezi clase și conturi de elev în câteva secunde — fără emailuri, fără date personale de la copii. Apoi urmărești totul dintr-un singur loc.",
     "teachers.f1": "<strong>Clase &amp; conturi elevi</strong> — username și parolă create de tine, stil Tinkercad.",
@@ -81,6 +92,7 @@ const I18N = {
     "pilot.name": "Nume", "pilot.school": "Școală / organizație", "pilot.email": "Email", "pilot.msg": "Mesaj (opțional)", "pilot.submit": "Trimite cererea",
     "footer.tag": "AI hands-on pentru școli. Un proiect din ecosistemul moldluca.", "footer.status": "Platformă în dezvoltare · 2026",
     "cookie.text": "Folosim cookie-uri doar pentru a înțelege traficul pe site (Google Analytics). Niciun cookie de marketing.", "cookie.accept": "Accept", "cookie.reject": "Refuz",
+    "footer.privacy": "Confidențialitate", "footer.terms": "Termeni", "footer.dpa": "DPA",
     "_form.sending": "Se trimite…", "_form.ok": "Mulțumim! Revenim curând. 🎉", "_form.err": "Ceva n-a mers. Scrie-ne direct pe email.",
   },
   en: {
@@ -102,6 +114,10 @@ const I18N = {
     "proof.q3": "\"Zero personal data from kids was decisive for us. School leadership said yes immediately.\"",
     "proof.a3n": "Deputy head", "proof.a3r": "pilot school",
     "proof.note": "Illustrative testimonials — to be replaced with real ones from the pilot.",
+    "about.tag": "About us", "about.title": "Built in Romania, for Romanian teachers.",
+    "about.p1": "TrainBot was born from a passion for robotics and education, within the Crocorobo & Perpetuum Mobile ecosystem. We believe every child should understand artificial intelligence — not just use it.",
+    "about.p2": "We're building the tool we wish we'd had in school: hands-on, safe and designed for the real classroom, with the teacher at the center.",
+    "about.m1": "🇷🇴 Made in Romania", "about.m2": "🤝 Part of Crocorobo / Perpetuum Mobile",
     "faq.tag": "Frequently asked", "faq.title": "What teachers want to know.",
     "faq.q1": "What equipment do I need?", "faq.a1": "An iPad or iPhone (iOS 17+) per student group, and a computer/tablet for the teacher dashboard. It works even with a single iPad shared in class.",
     "faq.q2": "How long to get started?", "faq.a2": "Under 15 minutes. Create a class, generate student accounts and set the first assignment. We help with onboarding during the pilot.",
@@ -125,6 +141,13 @@ const I18N = {
     "how.s1t": "The child trains", "how.s1p": "On the iPad, the student collects examples (photos or text) and trains a real, on-device model with CoreML. They watch the model \"learn\" in real time.",
     "how.s2t": "The child tests", "how.s2p": "Then they put it to the test with new examples. \"Did it guess right?\" The feedback button teaches that a good model needs good data.",
     "how.s3t": "The teacher sees all", "how.s3p": "In the dashboard you see classes, assignments and each student's progress — what model they built, how well it performs, where they got stuck.",
+    "demo.tag": "Try it yourself", "demo.title": "Train a mini-model. Right now.",
+    "demo.lead": "Exactly what a child does in TrainBot: give examples, train, test. Sort the images into the right group.",
+    "demo.s1": "Select an image, then its group:", "demo.bfruit": "🍎 Fruit", "demo.banimal": "🐾 Animals",
+    "demo.train": "Train the model", "demo.training": "The model is learning from your examples…", "demo.s3": "Now test it with a new image:",
+    "demo.guess": "What is this?", "demo.reset": "↺ Start over",
+    "demo.correct": "Correct! The model says {label} — {conf}% confidence. Good data → good predictions.",
+    "demo.wrong": "The model says {label} ({conf}%). Hmm — check how you sorted your examples. That's how kids learn about bias!",
     "teachers.tag": "For teachers", "teachers.title": "The dashboard that puts you in control.",
     "teachers.lead": "Create classes and student accounts in seconds — no emails, no personal data from kids. Then follow everything from one place.",
     "teachers.f1": "<strong>Classes &amp; student accounts</strong> — username and password you create, Tinkercad-style.",
@@ -160,6 +183,7 @@ const I18N = {
     "pilot.name": "Name", "pilot.school": "School / organization", "pilot.email": "Email", "pilot.msg": "Message (optional)", "pilot.submit": "Send request",
     "footer.tag": "Hands-on AI for schools. A project from the moldluca ecosystem.", "footer.status": "Platform in development · 2026",
     "cookie.text": "We use cookies only to understand site traffic (Google Analytics). No marketing cookies.", "cookie.accept": "Accept", "cookie.reject": "Decline",
+    "footer.privacy": "Privacy", "footer.terms": "Terms", "footer.dpa": "DPA",
     "_form.sending": "Sending…", "_form.ok": "Thanks! We'll be in touch soon. 🎉", "_form.err": "Something went wrong. Email us directly.",
   },
 };
@@ -243,6 +267,80 @@ if (steps.length && howSection) {
     s.addEventListener("mouseenter", () => { stop(); idx = i; setActive(i); });
     s.addEventListener("mouseleave", () => start());
   });
+}
+
+/* ---------- mini-demo interactiv (antrenează un clasificator) ---------- */
+const demoCard = document.getElementById("demoCard");
+if (demoCard) {
+  const TRAIN = [{ e: "🍎", t: "fruit" }, { e: "🍌", t: "fruit" }, { e: "🍇", t: "fruit" }, { e: "🐱", t: "animal" }, { e: "🐶", t: "animal" }, { e: "🐰", t: "animal" }];
+  const TESTS = [{ e: "🍓", t: "fruit" }, { e: "🦊", t: "animal" }, { e: "🍉", t: "fruit" }, { e: "🐸", t: "animal" }, { e: "🍑", t: "fruit" }, { e: "🐭", t: "animal" }];
+  const palette = document.getElementById("demoPalette");
+  const buckets = { fruit: document.getElementById("bucketfruit"), animal: document.getElementById("bucketanimal") };
+  const trainBtn = document.getElementById("demoTrain");
+  const mascot = document.getElementById("demoMascot");
+  const s1 = document.getElementById("demoStage1"), s2 = document.getElementById("demoStage2"), s3 = document.getElementById("demoStage3");
+  const bar = document.getElementById("demoBar");
+  const testItemEl = document.getElementById("demoTestItem"), guessBtn = document.getElementById("demoGuess"), resultEl = document.getElementById("demoResult");
+  let selected = null, tally = { fruit: { fruit: 0, animal: 0 }, animal: { fruit: 0, animal: 0 } }, curTest = null;
+
+  const setMascot = (st) => { if (mascot) mascot.dataset.state = st; };
+  const armBuckets = (on) => document.querySelectorAll(".demo-bucket").forEach((b) => b.classList.toggle("armed", on));
+
+  function buildPalette() {
+    palette.innerHTML = "";
+    TRAIN.forEach((it) => {
+      const c = document.createElement("button");
+      c.type = "button"; c.className = "demo-chip"; c.textContent = it.e; c.dataset.type = it.t; c.dataset.e = it.e;
+      c.addEventListener("click", () => {
+        if (selected === c) { c.classList.remove("selected"); selected = null; armBuckets(false); return; }
+        if (selected) selected.classList.remove("selected");
+        selected = c; c.classList.add("selected"); armBuckets(true);
+      });
+      palette.appendChild(c);
+    });
+  }
+  document.querySelectorAll(".demo-bucket").forEach((b) => {
+    b.addEventListener("click", () => {
+      if (!selected) return;
+      const bk = b.dataset.bucket;
+      const span = document.createElement("span"); span.textContent = selected.dataset.e;
+      buckets[bk].appendChild(span);
+      tally[bk][selected.dataset.type]++;
+      selected.remove(); selected = null; armBuckets(false); setMascot("thinking");
+      const got = tally.fruit.fruit + tally.fruit.animal + tally.animal.fruit + tally.animal.animal;
+      const bothNonEmpty = (tally.fruit.fruit + tally.fruit.animal > 0) && (tally.animal.fruit + tally.animal.animal > 0);
+      trainBtn.disabled = !(bothNonEmpty && got >= 4);
+    });
+  });
+  trainBtn.addEventListener("click", () => {
+    s1.hidden = true; s2.hidden = false; setMascot("learning"); bar.style.width = "0";
+    requestAnimationFrame(() => { bar.style.width = "100%"; });
+    setTimeout(() => { s2.hidden = true; s3.hidden = false; setMascot("idle"); pickTest(); }, 1800);
+  });
+  function pickTest() {
+    curTest = TESTS[Math.floor(Math.random() * TESTS.length)];
+    testItemEl.textContent = curTest.e; resultEl.hidden = true; guessBtn.disabled = false;
+  }
+  guessBtn.addEventListener("click", () => {
+    guessBtn.disabled = true;
+    const cf = tally.fruit[curTest.t], ca = tally.animal[curTest.t];
+    const pred = cf >= ca ? "fruit" : "animal";
+    const totalPred = tally[pred].fruit + tally[pred].animal;
+    const conf = totalPred ? Math.round((tally[pred][curTest.t] / totalPred) * 100) : 50;
+    const correct = pred === curTest.t;
+    const dict = I18N[currentLang];
+    const label = pred === "fruit" ? dict["demo.bfruit"] : dict["demo.banimal"];
+    resultEl.hidden = false; resultEl.className = "demo-result " + (correct ? "ok" : "no");
+    resultEl.innerHTML = dict[correct ? "demo.correct" : "demo.wrong"].replace("{label}", "<b>" + label + "</b>").replace("{conf}", conf);
+    setMascot(correct ? "happy" : "confused");
+  });
+  document.getElementById("demoReset").addEventListener("click", () => {
+    tally = { fruit: { fruit: 0, animal: 0 }, animal: { fruit: 0, animal: 0 } }; selected = null;
+    buckets.fruit.innerHTML = ""; buckets.animal.innerHTML = "";
+    trainBtn.disabled = true; bar.style.width = "0";
+    s3.hidden = true; s2.hidden = true; s1.hidden = false; setMascot("idle"); buildPalette();
+  });
+  buildPalette();
 }
 
 /* ---------- pilot form (Formspree) ---------- */
