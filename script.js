@@ -71,7 +71,7 @@ const I18N = {
     "kids.f2": "<strong>Mascotul TB</strong> — un ghid prietenos prin fiecare pas.",
     "kids.f3": "<strong>Modul conversațional sigur</strong> — moderare AI pe ce intră și ce iese.",
     "kids.note": "Aplicația reală, pe iPhone", "kids.appstate": "Modelul învață…", "kids.appbtn": "Antrenează",
-    "gallery.tag": "Aplicația, pe bune", "gallery.title": "Capturi reale din TrainBot.", "gallery.lead": "Aplicație nativă pentru iOS și Android. Antrenare AI pe device, boți conversaționali siguri și provocări zilnice — totul în română.", "gallery.g1": "Acasă", "gallery.g2": "Antrenare AI", "gallery.g3": "Bot conversațional", "gallery.g4": "Realizări", "gallery.g5": "Provocarea zilei",
+    "gallery.tag": "Aplicația, pe bune", "gallery.title": "Plimbă-te prin aplicație.", "gallery.lead": "Capturi reale din aplicația iOS. Antrenare AI pe device, boți conversaționali siguri și provocări zilnice — totul în română.", "gallery.g1": "Acasă", "gallery.g2": "Antrenare AI", "gallery.g3": "Bot conversațional", "gallery.g4": "Realizări", "gallery.g5": "Provocarea zilei", "car.t1": "Acasă", "car.d1": "Totul într-un singur loc. De aici copilul antrenează modele, discută cu boții AI și își urmărește progresul — un ghid prietenos la fiecare pas.", "car.t2": "Antrenare AI", "car.d2": "Copilul adaugă poze și antrenează un model direct pe telefon. Vede modelul „învățând”, pas cu pas — iar pozele rămân pe device, nu pe internet.", "car.t3": "Boții tăi AI", "car.d3": "Copilul își creează propriul bot, îl învață cu exemple și conversează cu el. Totul filtrat și sigur, cu o limită zilnică de mesaje.", "car.t4": "Realizări", "car.d4": "Insigne și XP pentru fiecare pas important. Învățarea devine un joc care motivează copilul să exploreze mai departe.", "car.t5": "Provocarea zilei", "car.d5": "O provocare nouă în fiecare zi. Copilul revine, exersează și câștigă XP — un motiv să se întoarcă la învățat.",
     "safety.tag": "Siguranță & conformitate", "safety.title": "Construit pentru clasă. Sigur prin design.",
     "safety.lead": "Știm că o școală nu poate face compromisuri pe siguranța datelor copiilor. De aceea TrainBot e gândit GDPR-first.",
     "safety.c1t": "Zero date personale de la copii", "safety.c1p": "Conturile elevilor sunt username + parolă create de profesor. Fără email, fără nume real obligatoriu.",
@@ -163,7 +163,7 @@ const I18N = {
     "kids.f2": "<strong>The TB mascot</strong> — a friendly guide through every step.",
     "kids.f3": "<strong>Safe conversational mode</strong> — AI moderation on input and output.",
     "kids.note": "The real app, on iPhone", "kids.appstate": "The model is learning…", "kids.appbtn": "Train",
-    "gallery.tag": "The app, for real", "gallery.title": "Real screenshots from TrainBot.", "gallery.lead": "Native app for iOS and Android. On-device AI training, safe conversational bots and daily challenges — all in Romanian.", "gallery.g1": "Home", "gallery.g2": "AI training", "gallery.g3": "Chat bot", "gallery.g4": "Achievements", "gallery.g5": "Daily challenge",
+    "gallery.tag": "The app, for real", "gallery.title": "Take a tour of the app.", "gallery.lead": "Real screenshots from the iOS app. On-device AI training, safe conversational bots and daily challenges — all in Romanian.", "gallery.g1": "Home", "gallery.g2": "AI training", "gallery.g3": "Chat bot", "gallery.g4": "Achievements", "gallery.g5": "Daily challenge", "car.t1": "Home", "car.d1": "Everything in one place. From here the child trains models, chats with AI bots and tracks their progress — a friendly guide at every step.", "car.t2": "AI training", "car.d2": "The child adds photos and trains a model right on the phone. They watch the model \"learn\", step by step — and the photos stay on the device, not on the internet.", "car.t3": "Your AI bots", "car.d3": "The child builds their own bot, teaches it with examples and chats with it. Everything filtered and safe, with a daily message limit.", "car.t4": "Achievements", "car.d4": "Badges and XP for every milestone. Learning becomes a game that motivates the child to explore further.", "car.t5": "Daily challenge", "car.d5": "A fresh challenge every day. The child comes back, practises and earns XP — a reason to return to learning.",
     "safety.tag": "Safety & compliance", "safety.title": "Built for the classroom. Safe by design.",
     "safety.lead": "We know a school can't compromise on children's data safety. That's why TrainBot is GDPR-first.",
     "safety.c1t": "Zero personal data from kids", "safety.c1p": "Student accounts are username + password created by the teacher. No email, no required real name.",
@@ -399,3 +399,31 @@ document.getElementById("cookieReject")?.addEventListener("click", () => {
 
 /* ---------- init ---------- */
 applyLang(currentLang);
+
+/* ===== Carusel aplicație ===== */
+(function () {
+  const car = document.getElementById("appCarousel");
+  const dotsWrap = document.getElementById("carDots");
+  if (!car || !dotsWrap) return;
+  const slides = Array.from(car.querySelectorAll(".car-slide"));
+  const dots = Array.from(dotsWrap.querySelectorAll(".car-dot"));
+  const prev = car.querySelector(".car-prev");
+  const next = car.querySelector(".car-next");
+  let i = 0, timer = null;
+  const DELAY = 6000;
+
+  function go(n) {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
+    dots.forEach((d, k) => d.classList.toggle("is-active", k === i));
+  }
+  function start() { stop(); timer = setInterval(() => go(i + 1), DELAY); }
+  function stop() { if (timer) clearInterval(timer); }
+
+  prev && prev.addEventListener("click", () => { go(i - 1); start(); });
+  next && next.addEventListener("click", () => { go(i + 1); start(); });
+  dots.forEach((d, k) => d.addEventListener("click", () => { go(k); start(); }));
+  car.addEventListener("mouseenter", stop);
+  car.addEventListener("mouseleave", start);
+  start();
+})();

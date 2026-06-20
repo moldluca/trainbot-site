@@ -555,3 +555,26 @@ ul { list-style: none; }
 
 /* ===== Lifestyle photo (hand holding phone) ===== */
 .app-photo{width:100%;max-width:420px;height:auto;display:block;margin:0 auto;border-radius:28px;filter:drop-shadow(0 28px 56px rgba(60,30,120,.30))}
+
+/* ===== Carousel aplicație (poza stânga, text dreapta) ===== */
+.carousel{display:flex;align-items:center;gap:18px;max-width:1060px;margin:48px auto 0;padding:0 16px}
+.car-stage{position:relative;flex:1;min-height:560px}
+.car-slide{position:absolute;inset:0;display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.car-slide.is-active{opacity:1;visibility:visible;transform:none}
+.car-visual{display:flex;justify-content:center}
+.car-visual img{width:100%;max-width:280px;height:auto;filter:drop-shadow(0 26px 52px rgba(60,30,120,.26))}
+.car-text{max-width:440px}
+.car-step{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:.08em;color:#8a5bff;background:rgba(138,91,255,.1);padding:5px 12px;border-radius:999px;margin-bottom:18px}
+.car-text h3{font-size:1.9rem;line-height:1.15;color:#1a1430;margin:0 0 14px}
+.car-text p{font-size:1.06rem;line-height:1.65;color:#5b5570;margin:0}
+.car-arrow{flex:0 0 auto;width:52px;height:52px;border-radius:50%;border:none;background:#fff;color:#8a5bff;font-size:1.8rem;line-height:1;cursor:pointer;box-shadow:0 8px 22px rgba(60,30,120,.16);transition:transform .2s ease,background .2s ease}
+.car-arrow:hover{transform:scale(1.08);background:#8a5bff;color:#fff}
+.car-dots{display:flex;justify-content:center;gap:10px;margin-top:34px}
+.car-dot{width:9px;height:9px;border-radius:50%;border:none;background:#cdc6e6;cursor:pointer;padding:0;transition:all .25s ease}
+.car-dot.is-active{background:#8a5bff;width:26px;border-radius:6px}
+@media(max-width:820px){
+  .car-slide{grid-template-columns:1fr;gap:18px;justify-items:center;text-align:center}
+  .car-text{max-width:520px}
+  .car-stage{min-height:680px}
+  .car-arrow{width:44px;height:44px;font-size:1.5rem}
+}

@@ -300,20 +300,70 @@
     </div>
   </section>
 
-  <!-- ============ GALERIE APLICAȚIE (capturi reale) ============ -->
+  <!-- ============ GALERIE APLICAȚIE (carusel iOS) ============ -->
   <section class="app-gallery" id="screenshots">
     <div class="container">
       <div class="section-head center">
         <span class="section-tag" data-i18n="gallery.tag">Aplicația, pe bune</span>
-        <h2 class="section-title" data-i18n="gallery.title">Capturi reale din TrainBot.</h2>
-        <p class="section-lead" data-i18n="gallery.lead">Aplicație nativă pentru iOS și Android. Antrenare AI pe device, boți conversaționali siguri și provocări zilnice — totul în română.</p>
+        <h2 class="section-title" data-i18n="gallery.title">Plimbă-te prin aplicație.</h2>
+        <p class="section-lead" data-i18n="gallery.lead">Capturi reale din aplicația iOS. Antrenare AI pe device, boți conversaționali siguri și provocări zilnice — totul în română.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/app/ios-home.png" alt="Ecranul principal TrainBot" loading="lazy" /><span data-i18n="gallery.g1">Acasă</span></div>
-        <div class="gallery-item"><img src="images/app/ios-training.png" alt="Antrenare model AI" loading="lazy" /><span data-i18n="gallery.g2">Antrenare AI</span></div>
-        <div class="gallery-item"><img src="images/app/ios-botlist.png" alt="Boții tăi AI" loading="lazy" /><span data-i18n="gallery.g3">Bot conversațional</span></div>
-        <div class="gallery-item"><img src="images/app/ios-achievements.png" alt="Realizări și XP" loading="lazy" /><span data-i18n="gallery.g4">Realizări</span></div>
-        <div class="gallery-item"><img src="images/app/ios-daily.png" alt="Provocarea zilei" loading="lazy" /><span data-i18n="gallery.g5">Provocarea zilei</span></div>
+
+      <div class="carousel" id="appCarousel" aria-roledescription="carusel">
+        <button class="car-arrow car-prev" aria-label="Ecranul anterior">‹</button>
+
+        <div class="car-stage">
+          <article class="car-slide is-active">
+            <div class="car-visual"><img src="images/app/ios-home.png" alt="Ecranul principal TrainBot" loading="lazy" /></div>
+            <div class="car-text">
+              <span class="car-step">01 / 05</span>
+              <h3 data-i18n="car.t1">Acasă</h3>
+              <p data-i18n="car.d1">Totul într-un singur loc. De aici copilul antrenează modele, discută cu boții AI și își urmărește progresul — un ghid prietenos la fiecare pas.</p>
+            </div>
+          </article>
+          <article class="car-slide">
+            <div class="car-visual"><img src="images/app/ios-training.png" alt="Antrenare model AI" loading="lazy" /></div>
+            <div class="car-text">
+              <span class="car-step">02 / 05</span>
+              <h3 data-i18n="car.t2">Antrenare AI</h3>
+              <p data-i18n="car.d2">Copilul adaugă poze și antrenează un model direct pe telefon. Vede modelul „învățând”, pas cu pas — iar pozele rămân pe device, nu pe internet.</p>
+            </div>
+          </article>
+          <article class="car-slide">
+            <div class="car-visual"><img src="images/app/ios-botlist.png" alt="Boții AI ai copilului" loading="lazy" /></div>
+            <div class="car-text">
+              <span class="car-step">03 / 05</span>
+              <h3 data-i18n="car.t3">Boții tăi AI</h3>
+              <p data-i18n="car.d3">Copilul își creează propriul bot, îl învață cu exemple și conversează cu el. Totul filtrat și sigur, cu o limită zilnică de mesaje.</p>
+            </div>
+          </article>
+          <article class="car-slide">
+            <div class="car-visual"><img src="images/app/ios-achievements.png" alt="Realizări și insigne" loading="lazy" /></div>
+            <div class="car-text">
+              <span class="car-step">04 / 05</span>
+              <h3 data-i18n="car.t4">Realizări</h3>
+              <p data-i18n="car.d4">Insigne și XP pentru fiecare pas important. Învățarea devine un joc care motivează copilul să exploreze mai departe.</p>
+            </div>
+          </article>
+          <article class="car-slide">
+            <div class="car-visual"><img src="images/app/ios-daily.png" alt="Provocarea zilei" loading="lazy" /></div>
+            <div class="car-text">
+              <span class="car-step">05 / 05</span>
+              <h3 data-i18n="car.t5">Provocarea zilei</h3>
+              <p data-i18n="car.d5">O provocare nouă în fiecare zi. Copilul revine, exersează și câștigă XP — un motiv să se întoarcă la învățat.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="car-arrow car-next" aria-label="Ecranul următor">›</button>
+      </div>
+
+      <div class="car-dots" id="carDots">
+        <button class="car-dot is-active" aria-label="1"></button>
+        <button class="car-dot" aria-label="2"></button>
+        <button class="car-dot" aria-label="3"></button>
+        <button class="car-dot" aria-label="4"></button>
+        <button class="car-dot" aria-label="5"></button>
       </div>
     </div>
   </section>
