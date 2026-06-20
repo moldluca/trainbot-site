@@ -552,3 +552,6 @@ ul { list-style: none; }
 .app-gallery .gallery-item img:hover{transform:translateY(-6px)}
 .app-gallery .gallery-item span{font-size:.92rem;color:var(--text-secondary,#6b6680);font-weight:600}
 @media(max-width:560px){.app-gallery .gallery-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+
+/* ===== Lifestyle photo (hand holding phone) ===== */
+.app-photo{width:100%;max-width:420px;height:auto;display:block;margin:0 auto;border-radius:28px;filter:drop-shadow(0 28px 56px rgba(60,30,120,.30))}
